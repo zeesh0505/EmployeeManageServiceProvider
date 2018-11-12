@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.hei-full{
+    height: 100%;
+    display: table-row;
+    border-top: 1px solid #cec1c1;
+    border-bottom: 1px solid #cec1c1;
+    text-align: center;
+}
+
+.fir-half{
+    background-color: #00383a;
+}
+
+.sec-half{
+    background-color: #f9f9f9;
+}
+
+html,body,.container {
+    height:100%;
+    padding: 2em 0 2em 0;
+}
+
+.container {
+    display:table;
+    width: 100%;
+    margin-top: -50px;
+    padding: 50px 0 0 0; /*set left/right padding according to needs*/
+    box-sizing: border-box;
+}
+
+/* .row {
+    height: 100%;
+    display: table-row;
+} */
+
+.row .no-float {
+  display: table-cell;
+  float: none;
+}
+
+.row{
+    margin: 0 0 0 0!important;
+}
+
+.font-change{
+    color: white;
+    padding: 9em 0 0 0;
+    font-size: small;
+}
+
+.sec-col{
+    color: white;
+    font-size: small;
+}
+
+.third-col{
+    color: white;
+    padding: 7em 0 0 0;
+    font-size: small;
+}
+
+.for-col{
+    color: white;
+    font-size: small;
+}
