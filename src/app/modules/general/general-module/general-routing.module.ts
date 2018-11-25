@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, CanActivate  } from '@angular/router';
-import { LoginPageComponent } from './../component/login-page/login-page.component';
+import { BranchDetailComponent } from './../component/branch-detail/branch-detail.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: LoginPageComponent},
+  { path: 'branch', component: BranchDetailComponent}
   
 ];
 

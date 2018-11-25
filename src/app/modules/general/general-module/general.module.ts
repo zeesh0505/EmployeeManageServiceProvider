@@ -4,7 +4,8 @@ import { GeneralRoutingModule } from './general-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-import { LoginPageComponent } from '../component/login-page/login-page.component';
+import { BranchDetailComponent } from './../component/branch-detail/branch-detail.component';
+
 
 
 @NgModule({
@@ -15,10 +16,10 @@ import { LoginPageComponent } from '../component/login-page/login-page.component
     ReactiveFormsModule,
   ],
   declarations: [
-    LoginPageComponent
+    BranchDetailComponent
   ],
   exports: [
-    LoginPageComponent
+    BranchDetailComponent
   ],
   providers: [
     DatePipe
