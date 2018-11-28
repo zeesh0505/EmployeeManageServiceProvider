@@ -1,173 +1,64 @@
-<!-- <div class="container-fluid">
-  <div class="home-cont row"> -->
-    <div class="wrapper">
-    <nav id="sidebar">
-      <div class="sidebar-header">
-          <h3>Service Provider</h3>
-      </div>
-
-      <ul class="list-unstyled components">
-          <p>Dummy Heading</p>
-          <li class="active">
-              <a targer="#" data-toggle="collapse" data-target="#homeSubmenu" aria-expanded="true" class="collapsed dropdown-toggle">Home</a>
-              <ul class="collapse list-unstyled" id="homeSubmenu">
-                  <li>
-                      <a href="#">Home 1</a>
-                  </li>
-                  <li>
-                      <a href="#">Home 2</a>
-                  </li>
-                  <li>
-                      <a href="#">Home 3</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-              <a href="#">About</a>
-          </li>
-          <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-              <ul class="collapse list-unstyled" id="pageSubmenu">
-                  <li>
-                      <a href="#">Page 1</a>
-                  </li>
-                  <li>
-                      <a href="#">Page 2</a>
-                  </li>
-                  <li>
-                      <a href="#">Page 3</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-              <a href="#">Portfolio</a>
-          </li>
-          <li>
-              <a href="#">Contact</a>
-          </li>
-      </ul>
-  </nav>
-      <div class="col inner-fill-background">
-          <div id="content">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <div class="container-fluid">
-          
-                      <button type="button" id="sidebarCollapse" class="btn btn-info">
-                          <i class="fas fa-align-left"></i>
-                          <span>Toggle Sidebar</span>
-                      </button>
-          
-                  </div>
-              </nav>
-          </div>
-          <!-- <i class="fa fa-bars fa-2x collapse-bttn" data-toggle="collapse" data-target=".collapseMenu"></i> -->
-          <div class="dash-content-collapse">
-              <!-- <router-outlet></router-outlet> -->
-          </div>
-      </div>
-  
-      <!--<p-footer>
-          <button name="okDialog" type="button" class="btn btn-success errbtn" (click)="errdialogclose()">Ok</button>
-      </p-footer> -->
- 
-   
-
-
-  <div class="loader-overlay" *ngIf="HTTPActivity">
-      <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-  </div>
-</div>
-<!-- </div>
-</div> -->
-
-
-<!-- <app-header></app-header>
-<div style = "border : 3px solid red">
-<div class="nav-side-menu active" style = "border : 3px solid green">
-      <div class="profile">
-        <img src="../assets/img/UserImg.png" class="profile-userpic" alt="">
-      </div>
-        <div class="brand">{{profile?.asscName}}</div>
-          <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-      
-            <div class="menu-list">
-                <div class="container">
-                    <div class="left-panel">
-                <ul id="menu-content" class="menu-content collapse out">
-                    <li class="collapsed active" routerLink="/dashboard">
-                      <a >
-                        <i class="fa fa-dashboard fa-lg"></i> <span class="collapse collapseMenu">Dashboard</span>
-                      </a>
-                    </li>
-      
-                    <li  data-toggle="collapse" data-target="#onboard" class="collapsed active">
-                      <a target="#"><i class="fa fa-users fa-lg"></i> <span class="collapse collapseMenu">Onboarding/Offboarding</span> </a>
-                    </li>
-                    <ul class="sub-menu collapse" id="onboard">
-                        <li [ngClass]="{'active': assoList}" (click)="setActive('assoList')" routerLink="/general/associate/associates" >Associate List</li>
-                        <li [ngClass]="{'active': assoUpload}" (click)="setActive('assoUpload')" routerLink="/general/associate/upload" *ngIf="profile?.isManager || profile?.isAdmin">Upload Associate Data</li>
-                        <li [ngClass]="{'active': domAllocation}" (click)="setActive('domAllocation')" routerLink="/general/associate/report">Allocation Report</li>
+<!-- <div class="wrapper">
+        <nav id="sidebar" class="collapse collapseMenu show" [@slideInOut]="menuState">
+            <div class="sidebar-header">
+                <h3>Bootstrap Sidebar</h3>
+            </div>
+    
+            <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
                     </ul>
-      
-                    <li data-toggle="collapse" data-target="#contract" class="collapsed active" *ngIf="profile?.isManager || profile?.isAdmin">
-                      <a target="#"><i class="fa fa-file fa-lg"></i> <span class="collapse collapseMenu">Contract Management</span></a>
-                    </li>  
-                    <ul class="sub-menu collapse" id="contract" *ngIf="profile?.isManager || profile?.isAdmin">
-                      <li [ngClass]="{'active':viewWo}" (click)="setActive('viewWo')" routerLink="/contract/viewwo">View Work Order</li>
-                      <li [ngClass]="{'active': wo}" (click)="setActive('wo')" routerLink="/contract/wo">Create Work Order</li>
-                      <li [ngClass]="{'active': forecast}" (click)="setActive('forecast')" routerLink="/contract/forecast">Project Forecast</li>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
                     </ul>
-      
-                    <li data-toggle="collapse" data-target="#vdi" class="collapsed active">
-                      <a target="#"><i class="fa fa-desktop fa-lg"></i> <span class="collapse collapseMenu">VDI Management </span></a>
-                    </li>
-                    <ul class="sub-menu collapse" id="vdi">
-                      <li [ngClass]="{'active': vdiList}" (click)="setActive('vdiList')" routerLink="/general/vdi/vdilist">VDI List</li>
-                      <li [ngClass]="{'active': vdiStatistics}" (click)="setActive('vdiStatistics')" routerLink="/general/vdi/vdistatistics">VDI Statistics</li>
-                    </ul>
-      
-                    <li data-toggle="collapse" data-target="#visa" class="collapsed active">
-                      <a target="#"><i class="fa fa-globe fa-lg"></i> <span class="collapse collapseMenu">Visa Management</span></a>
-                    </li>
-                    <ul class="sub-menu collapse" id="visa">
-                      <li [ngClass]="{'active': visaList}" (click)="setActive('visaList')" routerLink="/general/visa/list">Visa List</li>
-                    </ul>
-                </ul>
-                </div>
-                <div class="main">
-                    <i class="fa fa-bars fa-2x collapse-bttn" data-toggle="collapse" data-target=".collapseMenu"></i>
-                </div>
-                </div>
-         </div>
-      </div>
-      <div class="dash-content-collapse" style = "border : 3px solid brown">
-          <router-outlet></router-outlet>
-      </div>
-      </div>
-<p-dialog [(visible)]="error" modal="true" [responsive]="true" showEffect="fade" (onHide)="errdialogclose()">
-    <p-header>
-        Error
-    </p-header>
-        <div>
-            Something unexpected has occured.Please try again later.
-        </div>
-    <p-footer>
-            <button name="okDialog" type="button" class="btn btn-success errbtn" (click)="errdialogclose()">Ok</button>
-    </p-footer>
-</p-dialog>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+    
+        </nav>
+        <div id="content">
+    
+                <nav class="navbar navbar-expand-lg navbar-light bg-light common-nav-adj">
+                    <div class="container-fluid common-cont-adj">
+        
+                        <button class="btn btn-info" id="toggleButton" data-toggle="collapse" data-target=".collapseMenu" (click)="toggleMenu()">
+                            <i class="fas fa-align-left"></i>
+                            <span>Toggle Sidebar</span>
+                        </button>
+                        <router-outlet></router-outlet>
+                    </div>
+                </nav>
+            </div>
+    </div> -->
 
-<p-dialog [(visible)]="isNewUser" modal="true" [responsive]="true" showEffect="fade" (onHide)="newUserDialogClose()">
-    <p-header>
-        Alert
-    </p-header>
-        <div>
-            Sorry you dont have access to this portal. Please contact BeneluxPMOTeam@cognizant.com for your access.
-        </div>
-    <p-footer>
-            <button name="okDialog" type="button" class="btn btn-success errbtn" (click)="newUserDialogClose()">Ok</button>
-    </p-footer>
-</p-dialog>
-   
-<div class="loader-overlay" *ngIf="HTTPActivity" >
-        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>                
-</div>  -->
+    <router-outlet></router-outlet>

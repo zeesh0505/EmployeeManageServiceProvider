@@ -5,7 +5,7 @@
 
 #sidebar {
     width: 250px;
-    position: fixed;
+    position: inherit;
     top: 0;
     left: 0;
     height: 100vh;
@@ -16,7 +16,9 @@
 }
 
 #sidebar.active {
-    margin-left: -250px;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
 }
 
 a[data-toggle="collapse"] {
@@ -105,4 +107,13 @@ ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
+}
+
+.common-cont-adj{
+    display: block;
+    padding: 0 0 0 0;
+}
+
+.common-nav-adj{
+    padding: 0 0 0 0;
 }
