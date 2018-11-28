@@ -1,0 +1,7 @@
+.login-row-adj{
+    height: 100%
+}
+
+.img-fluid {
+    height: -webkit-fill-available;
+}
