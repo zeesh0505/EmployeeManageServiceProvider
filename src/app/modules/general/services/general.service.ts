@@ -65,19 +65,27 @@ export class GeneralService {
   //     this.httpClient.get<any[]>(url3)
   //   ]);
 
-  public sample(associates:any):Observable<any>{
+  public sample():Observable<any>{
 
-    let headers = new HttpHeaders();
-    let body = new HttpParams();
-    body = body.set('user', 'zeeshan');
-    body = body.set('name', 'zeeshan');
-    body = body.set('password', 'passwrd');
+    // let headers = new HttpHeaders();
+    // let body = new HttpParams();
+    // body = body.set('user', 'zeeshan');
+    // body = body.set('name', 'zeeshan');
+    // body = body.set('password', 'passwrd');
+
+
+    let headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });   
+    let params = new HttpParams();
+    params = params.append('user', 'zeeshan'); 
+    params = params.append('name', 'zeeshan'); 
+    params = params.append('password', 'passwrd'); 
 
     // const body = 'user=zeeshan&name=zeeshan&password=passwrd';
-    headers = new HttpHeaders().set('Content-Type', 'aaa');
-    var options =  {headers: headers};
+    // headers = new HttpHeaders({ 'Content-Type': '' });   
+    // var options =  {headers: headers};
     let url = 'http://zizinternational.in/service/new/dist/Service-Provider/test.php';
-    return this.httpClient.post<any>(url, body, options);
+    // return this.httpClient.post<any>(url,body,options );
+    return this.httpClient.post<any>(url,{ headers: headers, params: params });
   }
 
    }

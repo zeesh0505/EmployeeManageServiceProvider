@@ -19,7 +19,7 @@ export class RegistrationPageComponent implements OnInit {
 
   userRegis(){
     var obj = [];
-    this.generalClient.sample(obj)
+    this.generalClient.sample()
   .subscribe(
    data => {
      console.log(data)
