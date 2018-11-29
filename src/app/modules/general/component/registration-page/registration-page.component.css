@@ -97,3 +97,7 @@
 .container{
     height: auto;
 }
+
+.regis-form{
+    display: contents;
+}
