@@ -13,10 +13,9 @@ padding: 2.3em 0;
     }
 } 
 
-html,body,.container,.login-block {
+/* html,body,.container,.login-block {
     height:100%;
-    /* padding: 2em 0 2em 0; */
-}
+} */
 .banner-sec{
     background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;
     border-radius: 10px 0px 0px 10px;
@@ -46,7 +45,7 @@ html,body,.container,.login-block {
     height: 370px;
     margin-top: auto;
     margin-bottom: auto;
-    width: 351px;
+    width: auto;
     background-color: rgb(136, 44, 0) !important;
     }
 
