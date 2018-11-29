@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpParams ,HttpHeaders} from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { environment } from '../../../../environments/environment';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/forkJoin';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GeneralService {
+
+  constructor(private httpClient: HttpClient) { 
+
+  }
 
   // serviceUrl: string = environment.api_url;
   // constructor(private httpClient: HttpClient) { }
@@ -62,4 +64,20 @@ export class GeneralService {
   //     this.httpClient.get<any[]>(url2),
   //     this.httpClient.get<any[]>(url3)
   //   ]);
+
+  public sample(associates:any):Observable<any>{
+
+    let headers = new HttpHeaders();
+    let body = new HttpParams();
+    body = body.set('user', 'zeeshan');
+    body = body.set('name', 'zeeshan');
+    body = body.set('password', 'passwrd');
+
+    // const body = 'user=zeeshan&name=zeeshan&password=passwrd';
+    headers = new HttpHeaders().set('Content-Type', 'aaa');
+    var options =  {headers: headers};
+    let url = 'http://zizinternational.in/service/new/dist/Service-Provider/test.php';
+    return this.httpClient.post<any>(url, body, options);
+  }
+
    }
